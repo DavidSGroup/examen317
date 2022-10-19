@@ -1,0 +1,67 @@
+ARQUITECTURA SISD:
+
+Se refiere a las computadoras convencionales de Von Neuman. 
+En la categoría SISD están la gran mayoría de las computadoras existentes. Son equipos con un solo procesador que trabaja sobre un solo dato a la vez. A estos equipos se les llama también computadoras secuenciales.
+Todas las computadoras SISD utilizan un registro simple llamado "el contador del programa", el cual lleva el conteo de la ejecucion serial de las instrucciones. Como cada instruccion es fetch-eada desde la memoria, el contador del programa es actualizado para direccionar a la siguiente instruccion ha de ser fetch-eada y ejecutada; lo que resulta ser una orden serial de ejecucion.
+Características
+Son equipos con un solo procesador, que trabaja sobre un solo dato a la vez.
+A estos equipos se les llama también computadoras secuenciales.
+Flujo único de instrucciones.
+Flujo único de datos.
+Corresponde al modelo estructural básico, con un procesador de instrucciones y un procesador de datos.
+Tiene una única vía de acceso a la memoria principal.
+Este es el modelo tradicional de computación secuencial donde una unidad de procesamiento recibe una sola secuencia de instrucciones que operan en una secuencia dedatos
+
+ARQUITECTURA MISD:
+Un procesador pipeline es un  procesador MISD que trabaja de acorde al principio del funcionamiento de un Pipe. 
+La arquitectura Pipeline es la forma es la forma fundamental de ejecucion paralela de un proceso y es una idea poderosa que puede probar de manera significativa e rendimiento de una computadora SIMD.
+Hay N secuencias de instrucciones(algoritmos/programas) y una secuencia de datos. El paralelismo es alcanzado dejando que los procesadores realicen diferentes cosas al mismo tiempo en el mismo dato.  
+No existen muchos ejemplos de esta arquitectura, ya que MIMD y SIMD son a menudo más apropiados para técnicas comunes de datos paralelos. Específicamente, permiten un mejor escalamiento y uso de recursos computacionales que el MISD. Sin embargo, un ejemplo prominente de MISD en la informática son las computadoras de control de vuelo del transbordador espacial.
+Un ejemplo de prominente de la MSID son los controladores de vuelo del transbordador espacial.
+
+ARQUITECTURA SIMD:
+
+SIMD (Single instruction multiple data) permite efectuar varias operaciones de calculo con una sola instrucción.
+A los procesadores basados en esta arquitectura, se los conoce como procesadores matriciales. 
+Esta arquitectura nace debido a la necesidad de aplicar repetidamente una misma operación en grupos datos diferentes como, Muestras contiguas de audio, matrices de vídeo, etc.
+Cada procesador sigue el mismo conjunto de instrucciones; diferentes elementos de información son asignados a cada procesador. Utilizan memoria distribuida. Típicamente tienen miles procesadores simples. Son utilizadas en redes neuronales.
+
+Las computadoras SIMD tienen una sola unidad de control y múltiples unidades funcionales. La unidad de control se encarga de enviar la misma instrucción a todas las unidades funcionales. Cada unidad funcional trabaja sobre datos diferentes. Estos equipos son de propósito específico, es decir, son apropiados para ciertas aplicaciones particulares, como por ejemplo el procesamiento de imágenes.
+
+Los procesadores SIMS se especializan en problemas numéricos que puedan expresarse como matrices o vectores. Cada unidad de procesamiento consta de una ALU y registros, y se utiliza para computar un elemento del resultado (front-end von Neumann, más un array de procesadores idénticos que realizan la misma instrucción).
+
+Ejemplo de Procesador SIMD:
+El procesador Pentium MMX introdujo en la arquitectura IA32 un set de recursos para el tratamiento de señales.
+
+ARQUITECTURA MIMD:
+
+Cuyas siglas significa Multiple Instruction, Multiple Data.
+Es un sistema con un flujo de múltiples instrucciones que operan sobre múltiples datos.
+Estos sistemas empezaron a utilizarse a principios de los 80.
+Se las conoce como múltiples computadoras y multiprocesadores. Se puede decir que MIMD es un súper conjunto de SIMD. 
+CARACTERISTICAS
+Son sistemas con memoria compartida que permite ejecutar varios procesos simultáneamente (sistema multiprocesador)
+La diferencia con estos sistemas es que MIMD es asíncrono.
+No tiene un reloj central.
+Cuando las unidades de proceso reciben datos de una memoria no compartida estos sistemas reciben el nombre de Múltiple SISD (MSISD).
+Los procesadores pueden ejecutar la misma o instrucción o diferentes instrucciones y tener sus propios datos
+Diferentes elementos de información se asignan a diferentes procesadores
+Pueden tener memoria distribuida o compartida.
+Cada procesador MIMD corre casi independientemente de los otros.
+Pueden ser utilizadas en aplicaciones con información en paralelo o con tareas en paralelo.
+Cada procesador tiene su propia unidad de control y su propia unidad funcional. 
+Los sistemas MIMD se clasifican en: 
+
+Sistemas de Memoria Compartida.
+Sistemas de Memoria Distribuida.
+Sistemas de Memoria Compartida Distribuida.
+Sistemas de Memoria Compartida.
+En este tipo de sistemas cada procesador tiene acceso a toda la memoria, es decir hay un espacio de direccionamiento compartido. 
+Las computadoras MIMD con memoria compartida son sistemas conocidos como de multiprocesamiento simétrico (SMP) donde múltiples procesadores comparten un mismo sistema operativo y memoria.
+
+Sistemas de Memoria Distribuida.
+Estos sistemas tienen su propia memoria local. Los procesadores pueden compartir información solamente enviando mensajes. 
+Las computadoras MIMD de memoria distribuida son conocidas como sistemas de procesamiento en paralelo masivo (MPP) donde múltiples procesadores trabajan en diferentes partes de un programa, usando su propio sistema operativo y memoria.
+
+Sistemas de Memoria Compartida Distribuida
+Es una partición de procesadores que tienen acceso a una memoria compartida común pero sin un canal compartido. Esto es, físicamente cada procesador posee su memoria local y se interconecta con otros procesadores por medio de un dispositivo de alta velocidad, y todos ven las memorias de cada uno como un espacio de direcciones globales. 
