@@ -1,0 +1,3 @@
+la taxonomia es MIMD
+donde la memoria compartida se trabaja con directivas OpenMP
+y para la memoria distribuida con la progrmacion mediante Message Passing Interface (MPI)
